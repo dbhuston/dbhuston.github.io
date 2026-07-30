@@ -1275,7 +1275,19 @@ input, select, textarea {
     /* max-height: 400px; */ 
 }
 
+/* Centers the container holding the button */
+.center-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem; /* Adds some breathing room above the button */
+    margin-bottom: 1rem;
+}
 
+/* Removes the dotted underline from the link */
+a.clean-button {
+    border-bottom: none !important;
+    text-decoration: none !important;
+}
 
 /* Wrapper */
 
