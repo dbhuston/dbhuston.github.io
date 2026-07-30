@@ -1,0 +1,652 @@
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<script src="https://kit.fontawesome.com/28847057b4.js" crossorigin="anonymous"></script>
+		<title>Dylan Huston</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<span><i class="fa-solid fa-microchip fa-2xl"></i></span>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>Dylan Huston</h1>
+								<p> Computer Engineer </p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="#intro">About Me</a></li>
+								<li><a href="#work">Work</a></li>
+								<li><a href="#projects">Projects</a></li>
+								<li><a href="#contact">Contact</a></li>
+								
+								<!--<li><a href="#elements">Elements</a></li>-->
+								
+								
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Intro -->
+							<article id="intro">
+								<h2 class="major">Intro</h2>
+								<span class="image main"><img src="images/pico.jpg" alt="" /></span>
+								<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#work">awesome work</a>.</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
+							</article>
+
+						<!-- Work -->
+							<article id="work">
+								<h2 class="major">Work</h2>
+								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
+								<p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
+								<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
+							</article>
+
+							<!-- Projects -->
+							<article id="projects">
+								<h2 class="major">Projects Gallery</h2>
+
+								<style>
+									
+									#main>article#projects {
+										width: 65rem !important;
+										
+										max-width: 90vw;
+										/* Keeps it from breaking off-screen on mobile phones */
+									}
+
+
+									/* The window that hides the overflowing tiles */
+									.carousel-viewport {
+										width: 100%;
+										overflow: hidden;
+										position: relative;
+										padding: 1rem 0 2rem 0;
+										box-sizing: border-box;
+										cursor: grab;
+										user-select: none;
+									}
+
+									.carousel-viewport:active {
+										cursor: grabbing;
+									}
+
+									/* The moving track holding the tiles */
+									.carousel-track {
+										display: flex;
+										width: max-content;
+										gap: 1.5rem;
+										/* 24px */
+
+									}
+
+									/* The individual tiles */
+									.switch-tile {
+										flex: 0 0 auto;
+										width: 220px;
+										height: 220px;
+										position: relative;
+										border-radius: 4px;
+										overflow: hidden;
+										border: 4px solid transparent;
+										transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+										text-decoration: none;
+										background: #2b2b2b;
+									}
+
+									.switch-tile img {
+										width: 100%;
+										height: 100%;
+										object-fit: cover;
+										display: block;
+									}
+
+									.switch-tile .tile-title {
+										position: absolute;
+										bottom: 0;
+										left: 0;
+										width: 100%;
+										background: rgba(0, 0, 0, 0.8);
+										color: #fff;
+										padding: 0.75rem;
+										text-align: center;
+										font-size: 0.9rem;
+										font-weight: bold;
+										opacity: 0;
+										transition: opacity 0.2s ease;
+										border-bottom: none;
+									}
+
+									.switch-tile:hover {
+										transform: scale(1.08);
+										border-color: #00e6e6;
+										box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+										z-index: 10;
+									}
+
+									.switch-tile:hover .tile-title {
+										opacity: 1;
+									}
+
+									/* Carousel Navigation Buttons */
+									.carousel-controls {
+										display: flex;
+										justify-content: center;
+										gap: 1rem;
+										margin-top: 1rem;
+									}
+
+									.carousel-btn {
+										background: rgba(255, 255, 255, 0.1);
+										border: 2px solid #fff;
+										color: #fff;
+										border-radius: 50%;
+										width: 60px;
+										height: 60px;
+										display: flex;
+										align-items: center;
+										justify-content: center;
+										cursor: pointer;
+										transition: all 0.2s ease;
+									}
+
+									.carousel-btn:hover {
+										background: #00e6e6;
+										border-color: #00e6e6;
+										color: #000;
+									}
+								</style>
+
+								<!-- Carousel Layout -->
+								<div class="carousel-viewport">
+									<div class="carousel-track" id="switchTrack">
+										<a href="#" class="switch-tile">
+											<img src="images/pic01.jpg" alt="Project 1" />
+											<div class="tile-title">Project Alphasss</div>
+										</a>
+										<a href="#" class="switch-tile">
+											<img src="images/pic02.jpg" alt="Project 2" />
+											<div class="tile-title">Database Build</div>
+										</a>
+										<a href="#oscilloscope" class="switch-tile">
+											<img src="images/oscope_sideshot.jpg" alt="Project 3" />
+											<div class="tile-title">Analog Oscilloscope</div>
+										</a>
+										<a href="#" class="switch-tile">
+											<img src="images/pico.jpg" alt="Project 4" />
+											<div class="tile-title">Network Config</div>
+										</a>
+										<!-- Add a 5th placeholder so it loops smoothly if on a wide screen -->
+										<a href="#" class="switch-tile">
+											<img src="images/pic01.jpg" alt="Project 5" />
+											<div class="tile-title">Server Rack</div>
+										</a>
+									</div>
+								</div>
+
+								<!-- On-screen controls -->
+								<div class="carousel-controls">
+									<div class="carousel-btn" id="btnPrev"><i class="fa-solid fa-chevron-left"></i></div>
+									<div class="carousel-btn" id="btnNext"><i class="fa-solid fa-chevron-right"></i></div>
+								</div>
+							</article>
+
+
+							<article id="oscilloscope">
+
+								<a href="#projects" class="circle-back"><i class="fa-solid fa-arrow-left"></i></a>
+								<h2 class="major">Analog Oscilloscope</h2>
+								<div class="video-container">
+  							<iframe width="560" height="315" 
+								src="https://www.youtube.com/embed/5tcEZuuJPJQ?si=R-riPevpr4yB7Njy" 
+								title="YouTube video player" 
+								frameborder="0" 
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+								allowfullscreen>
+   							 </iframe>
+							</div>
+							
+							<p> This project is THE project that has made me feel the most pride and joy. When I came up with this idea, I actually had
+								no idea that there was common terminology for an oscilloscope like this. It started when I came across
+								<a href="https://everycircuit.com/circuit/5039282365661184/8-op-amp-comparator-ladder">this</a> comparator ladder posted
+								by user TitaniumNation on the EveryCircuit webpage. I thought this was just so neat that I had to replicate it. 
+								<br>
+								<br>
+								I started by recreating the circuit from EveryCircuit into Multisim.
+							</p>
+
+							<span class="image main">
+   								<img src="images/comparatorladder_multisim.jpg" alt="A depiction of 8 comparing op-amps sketched in Multisim" />
+							</span>
+
+							<p>
+								It was about this time I realized that I could set two of these comparator ladders against eachother. If one ladder
+								contained a time base and the other the input, they could be ANDed and display the function over time.
+							</p>
+
+							<p>
+								I wanted to keep this project mostly analog, which meant that I was going to avoid using integrated circuits
+								as much <i>as possible</i>. At the time, I had minimal experience with MOSFET logic, and functioned best when working
+								with NMOS transistors. So, I devised that I needed 128 NMOS transistors (2 for each AND gate) in order to create an 8x8 LED matrix to use as a 
+								display.
+								<br>
+								<br>
+								This is one of the eight rows that would be needed to create the entire design:
+							</p>
+
+							<span class="image main">
+   								<img src="images/ledrow_multisim.jpg" alt="One of eight rows used in making an LED matrix filled with BS170 NMOS transistors" />
+							</span>
+
+							<p>
+								The top row of transistors (Q2,Q4,Q6...) take a single output from either comparator ladder. For me, it is the input signal that we want to observe.
+								It could be either the horizontal or the vertical axis, the only difference is a 90&deg rotation on the display.
+								<br>
+								<br>
+								The other row has to contain every output from the other comparator ladder. This is done with Q1 being the first output, Q2 being the second, and so on.
+								<br><br>
+								Now, this is repeated for all seven other rows. The bottom row of transistors connects to the bottom transistor in the row above it, and the next vertical
+								connection is shared across the next row. <br><br>
+
+								Here is what it looks like with two rows of LEDs. 
+
+							</p>
+
+
+							<span class="image main">
+   								<img src="images/tworows.jpg" alt="One of eight rows used in making an LED matrix filled with BS170 NMOS transistors" />
+							</span>
+
+
+							<p>
+
+								Here is where I encountered a massive problem though. This would never look like an oscilloscope. Its output would only ever look
+								like a very large rendition of TitaniumNation's comparator ladder. In each row if the previous logic was high, it was going
+								to stay high. Thus, I had to devise a way to incorporate XORs at the end of each comparator ladder output to prevent linear growth on the display. 
+
+								<br>
+								<br>
+
+								Each two input XOR would take seven more NMOS transistors, and I needed sixteen XORs, because each input needed to be compared to the previous.
+								Adding over 100 transistors to the project was simply not feasable and I had to use integrated circuits. This made life a quite a bit easier though.
+								
+							</p>
+
+							<span class="image main">
+   								<img src="images/ladder_xor.jpg" alt="XOR logic" />
+							</span>
+
+
+							<p>
+								Now that everything was simulated and working, I was able to finally begin work on constructing this project. I began with the comparator ladders, each of
+								which used 4x LM293P dual comparator integrated circuits, 9x 1k &#x3A9 resistors, and 8x 10k &#x3A9 resistors as pull up resistors.
+
+							</p>
+
+
+
+							<div class="image-row">
+							<span class="image fit">
+								<img src="images/blue_ladder.jpg" alt="One of two comparator ladders used in processing a signal" />
+							</span>
+    
+								<span class="image fit">
+									<img src="images/white_ladder.jpg" alt="One of two comparator ladders used in processing a signal" />
+								</span>
+								</div>
+
+
+								<p>Then, I needed to connect each output of the comparator ladders (blue and white outside wires) to each XOR input.</p>
+
+								<span class="image main">
+   								<img src="images/xor_full.jpg" alt="" />
+								</span>
+
+								<p> Unfortunately, the only image of the white side logic contains the messy wiring, but the logic is the same as shown
+									on the left. It takes eight inputs, four on the left four on the right of each set and performs the logic shown earlier.
+									<br><br>
+									From this point, wires were attached at each XOR output and connected to the LED matrix. 
+								</p>
+
+								<span class="image main">
+   								<img src="images/full_matrix.jpg" alt="" />
+								</span>
+
+								<p>
+									128x BS170 NMOS Transistors, 64x 200&#x3A9 resistors, 64x Red LEDs, a few 10M &#x3A9 resistors thrown in to pull down the transistors, HOURS of clean
+									wiring later. I was able to connect each XOR output to a row/column and visualize signals. 
+
+									<br><br>
+									In all truth, it did not work first try (shocker). I was incorrect in one of my intial thoughts that if I had a very high frequency time base, the signal would be more clear
+									because its only connecting at the specific points for less time. Well, that just made a mess of LEDs across my breadboard. I was quickly able to piece together that for this project
+									the two signals needed to share the same frequency. 
+
+									<br><br>
+
+									If you did not watch the video at the top, feel free to watch it here! It was just a quick video on my phone for myself so it is lacking technical depth, but it is definitely cool to see!
+
+								</p>
+								<div class="video-container">
+  							<iframe width="560" height="315" 
+								src="https://www.youtube.com/embed/5tcEZuuJPJQ?si=R-riPevpr4yB7Njy" 
+								title="YouTube video player" 
+								frameborder="0" 
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+								allowfullscreen>
+   							 </iframe>
+							</div>
+
+							</article>
+
+						<!-- Contact -->
+							<article id="contact">
+								<h2 class="major">Contact</h2>
+								<form method="post" action="https://formspree.io/f/xvzelbek">
+									<div class="fields">
+										<div class="field half">
+											<label for="name">Name</label>
+											<input type="text" name="name" id="name" />
+										</div>
+										<div class="field half">
+											<label for="email">Email</label>
+											<input type="text" name="email" id="email" />
+										</div>
+										<div class="field">
+											<label for="message">Message</label>
+											<textarea name="message" id="message" rows="4"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" class="primary" /></li>
+										<li><input type="reset" value="Reset" /></li>
+									</ul>
+								</form>
+								<ul class="icons">
+									<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</article>
+
+						<!-- Elements -->
+							<article id="elements">
+								<h2 class="major">Elements</h2>
+
+								<section>
+									<h3 class="major">Text</h3>
+									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
+									<hr />
+									<h2>Heading Level 2</h2>
+									<h3>Heading Level 3</h3>
+									<h4>Heading Level 4</h4>
+									<h5>Heading Level 5</h5>
+									<h6>Heading Level 6</h6>
+									<hr />
+									<h4>Blockquote</h4>
+									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+									<h4>Preformatted</h4>
+									<pre><code>i = 0;
+
+while (!deck.isInOrder()) {
+    print 'Iteration ' + i;
+    deck.shuffle();
+    i++;
+}
+
+print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+								</section>
+
+								<section>
+									<h3 class="major">Lists</h3>
+
+									<h4>Unordered</h4>
+									<ul>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Sagittis adipiscing.</li>
+										<li>Felis enim feugiat.</li>
+									</ul>
+
+									<h4>Alternate</h4>
+									<ul class="alt">
+										<li>Dolor pulvinar etiam.</li>
+										<li>Sagittis adipiscing.</li>
+										<li>Felis enim feugiat.</li>
+									</ul>
+
+									<h4>Ordered</h4>
+									<ol>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Etiam vel felis viverra.</li>
+										<li>Felis enim feugiat.</li>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Etiam vel felis lorem.</li>
+										<li>Felis enim et feugiat.</li>
+									</ol>
+									<h4>Icons</h4>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+									</ul>
+
+									<h4>Actions</h4>
+									<ul class="actions">
+										<li><a href="#" class="button primary">Default</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+									<ul class="actions stacked">
+										<li><a href="#" class="button primary">Default</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+								</section>
+
+								<section>
+									<h3 class="major">Table</h3>
+									<h4>Default</h4>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Description</th>
+													<th>Price</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Item One</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Two</td>
+													<td>Vis ac commodo adipiscing arcu aliquet.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Three</td>
+													<td> Morbi faucibus arcu accumsan lorem.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Four</td>
+													<td>Vitae integer tempus condimentum.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Five</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="2"></td>
+													<td>100.00</td>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
+
+									<h4>Alternate</h4>
+									<div class="table-wrapper">
+										<table class="alt">
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Description</th>
+													<th>Price</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Item One</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Two</td>
+													<td>Vis ac commodo adipiscing arcu aliquet.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Three</td>
+													<td> Morbi faucibus arcu accumsan lorem.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Four</td>
+													<td>Vitae integer tempus condimentum.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Five</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="2"></td>
+													<td>100.00</td>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
+								</section>
+
+								<section>
+									<h3 class="major">Buttons</h3>
+									<ul class="actions">
+										<li><a href="#" class="button primary">Primary</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+									<ul class="actions">
+										<li><a href="#" class="button">Default</a></li>
+										<li><a href="#" class="button small">Small</a></li>
+									</ul>
+									<ul class="actions">
+										<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
+										<li><a href="#" class="button icon solid fa-download">Icon</a></li>
+									</ul>
+									<ul class="actions">
+										<li><span class="button primary disabled">Disabled</span></li>
+										<li><span class="button disabled">Disabled</span></li>
+									</ul>
+								</section>
+
+								<section>
+									<h3 class="major">Form</h3>
+									<form method="post" action="#">
+										<div class="fields">
+											<div class="field half">
+												<label for="demo-name">Name</label>
+												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
+											</div>
+											<div class="field half">
+												<label for="demo-email">Email</label>
+												<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
+											</div>
+											<div class="field">
+												<label for="demo-category">Category</label>
+												<select name="demo-category" id="demo-category">
+													<option value="">-</option>
+													<option value="1">Manufacturing</option>
+													<option value="1">Shipping</option>
+													<option value="1">Administration</option>
+													<option value="1">Human Resources</option>
+												</select>
+											</div>
+											<div class="field half">
+												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
+												<label for="demo-priority-low">Low</label>
+											</div>
+											<div class="field half">
+												<input type="radio" id="demo-priority-high" name="demo-priority">
+												<label for="demo-priority-high">High</label>
+											</div>
+											<div class="field half">
+												<input type="checkbox" id="demo-copy" name="demo-copy">
+												<label for="demo-copy">Email me a copy</label>
+											</div>
+											<div class="field half">
+												<input type="checkbox" id="demo-human" name="demo-human" checked>
+												<label for="demo-human">Not a robot</label>
+											</div>
+											<div class="field">
+												<label for="demo-message">Message</label>
+												<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+											</div>
+										</div>
+										<ul class="actions">
+											<li><input type="submit" value="Send Message" class="primary" /></li>
+											<li><input type="reset" value="Reset" /></li>
+										</ul>
+									</form>
+								</section>
+
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src = "assets/js/carousel.js"></script>
+
+	</body>
+</html>
